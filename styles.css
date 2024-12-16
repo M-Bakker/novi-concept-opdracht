@@ -10,15 +10,51 @@
         4.2 Introduction
         etc.
     5. Media Queries
+
+Paars #5722CD;
+Blauw #4845E4;
+Roze #ED4385;
+Zwart #0C0C0C (voor standaard tekst);
+Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:
+Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
+Grijs #7A7A7A (voor de service-tegel tekst);
 ////////////////////////*/
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* ------------------------------- 1. Global Styles -------------------------------- */
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* ------------------------------- 2. Typography ----------------------------------- */
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+a h1, h2, h3, h4, h5, h6 {
+    font-family: "merriweather", serif;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 400;
+}
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+a {
+    text-decoration: none;
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
@@ -26,6 +62,77 @@
 
 /* --------------- 4.1 Header ------------------------- */
 
-/* --------------- 4.2 Introduction ------------------- */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5722CD;
+    background-image: url("assets/squiggle_line.svg");
+    color: white;
+}
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+    gap: 40px;
+    width: 60%;
+}
 
+nav {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.work-together-button {
+    cursor: pointer;
+    border: none;
+    padding: 20px 30px 20px 40px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: white;
+    background-color: #ED4385;
+    box-shadow: 0px 0px 5px 4px rgba(28, 43, 50, 0.23);
+}
+
+.squiggle {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+/* --------------- 4.2 main ------------------- */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.introduction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 70%;
+    text-align: center;
+    gap: 20px;
+    color: #5722CD;
+    padding: 50px;
+}
+
+.introduction p {
+    color: black;
+    font-size: 15px;
+    padding-top: 50px;
+}
 /* ------------------------------- 5. Media Queries -------------------------------- */
